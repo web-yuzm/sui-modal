@@ -12,7 +12,7 @@ Render component passing the following params:
 *  `verticallyCentered`: Optional param to vertically center the modal. Defaults to `false`.
 * `closeOnOutsideClick`: Optional param to close the modal on outside click. Defaults to `false`.
 * `textClose`: Optional text for the modal close button. Defaults to `'Close'`.
- * `textCloseHidden`: Optional param to hide the modal close button text. Defaults to `true`.
+* `textCloseHidden`: Optional param to hide the modal close button text. Defaults to `true`.
 * `header`: Optional param to pass the header elements within a required wrapper (DOM element).
 *  `content`: Required param to pass the content elements within a required wrapper (DOM element).
 * `footer`: Optional param to pass the footer elements within a required wrapper (DOM element).
