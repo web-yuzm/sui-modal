@@ -1,0 +1,69 @@
+@import 'settings';
+@import 'helpers/hidden-text';
+
+.sui-Modal {
+  background-color: $bg-modal;
+  bottom: 0;
+  display: none;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 100;
+
+  &--verticallyCentered:before {
+    content: '\200B';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &-dialog {
+    background-color: $bg-modal-dialog;
+    border: $bdw-modal solid $bdc-modal;
+    box-shadow: $bxsh-modal;
+    display: inline-block;
+    margin: $m-modal;
+    max-width: $maw-modal;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  &-header {
+    background-color: $bg-modal-header;
+    color: $c-modal-header;
+    min-height: $h-modal-close;
+    padding: $p-modal-header $p-modal;
+    position: relative;
+  }
+
+  &-close {
+    background-color: transparent;
+    background-image: $bgi-modal-close;
+    background-repeat: no-repeat;
+    border: 0;
+    cursor: pointer;
+    height: $h-modal-close;
+    padding: 0;
+    position: absolute;
+    right: $r-modal-close;
+    top: $t-modal-close;
+    width: $w-modal-close;
+  }
+
+  &-content {
+    border-bottom: $bdw-modal-content $bds-modal-content $bdc-modal-content;
+    border-top: $bdw-modal-content $bds-modal-content $bdc-modal-content;
+    padding: $p-modal-content;
+  }
+
+  &-footer {
+    padding: $p-modal-footer $p-modal;
+  }
+}
