@@ -30,9 +30,11 @@
     box-shadow: $bxsh-modal;
     display: inline-block;
     margin: $m-modal;
-    max-width: $maw-modal;
     text-align: left;
     vertical-align: middle;
+    @media screen and (min-width: 600px) {
+      max-width: $maw-modal;
+    }
   }
 
   &-header {
