@@ -1,0 +1,131 @@
+<header>
+  <div class="block block--centered">
+    <img src='img/sui-components.png' />
+    <h1>SUI-Modal React component</h1>
+    <h4>An open source React multimedia component</h4>
+  </div>
+</header>
+
+<section class="block-highlighted block--centered">
+  <div class="block block--centered">
+    <h2>Description</h2>
+    <p>The SUI-Modal component renders a smart dialog prompt over your site's content. It supplies some interface methods to meet the minimum required functionality.</p>
+    <p>Render component passing the following params:</p>
+    <ul>
+      <li><code>open</code>: Optional param to show up initially the modal. Defaults to <code>false</code>.</li>
+      <li> <code>verticallyCentered</code>: Optional param to vertically center the modal. Defaults to <code>false</code>.</li>
+      <li><code>closeOnOutsideClick</code>: Optional param to close the modal on outside click. Defaults to <code>false</code>.</li>
+      <li><code>textClose</code>: Optional text for the modal close button. Defaults to <code>'Close'</code>.</li>
+       <li><code>textCloseHidden</code>: Optional param to hide the modal close button text. Defaults to <code>true</code>.</li>
+      <li><code>header</code>: Optional param to pass the header elements within a required wrapper (DOM element).</li>
+      <li> <code>content</code>: Required param to pass the content elements within a required wrapper (DOM element).</li>
+      <li><code>footer</code>: Optional param to pass the footer elements within a required wrapper (DOM element).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block block-usecase block--centered">
+  <div class="centered-block">
+
+    <h2>SUI-Modal: render example</h2>
+    <div id="modal"></div>
+
+    <h2>SUI-Modal: implementation code example</h2>
+    <div>
+      <pre>
+        <code class="language-js">
+import React from 'react';
+import ReactDom from 'react-dom';
+import SuiModal from '../src';
+
+class MyModal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
+
+  openModal() {
+    this.setState({
+      open: true
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      open: false
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;button type='button' onClick={this.openModal.bind(this)}&gt;
+          Open modal
+        &lt;/button&gt;
+        &lt;SuiModal
+          open={this.state.open}
+          verticallyCentered
+          closeOnOutsideClick
+          header={
+            &lt;strong&gt;My new brand modal&lt;/strong&gt;
+          }
+          content={
+            &lt;div&gt;
+              &lt;p&gt;Cras vitae consectetur dui. Nullam quis arcu id ligula rhoncus faucibus et eget odio. Etiam vulputate fringilla nibh sed sodales. Phasellus facilisis dignissim aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque feugiat vehicula odio at venenatis. Integer rhoncus tortor sed auctor laoreet. Aliquam ac vulputate urna. Suspendisse felis eros, maximus eget urna vitae, pellentesque pretium odio. Duis mi arcu, laoreet sit amet pulvinar ac, congue quis turpis. Cras rutrum leo ac massa malesuada, quis vestibulum lorem convallis. Fusce eget tellus euismod, fringilla nulla ornare, blandit purus. Nam orci lacus, faucibus at nisi id, auctor molestie nunc. Nulla a porta quam. Donec vel iaculis nibh.&lt;/p&gt;
+              &lt;p&gt;Ut maximus fermentum mollis. Phasellus tincidunt nunc sem, eu efficitur nunc porta ut. Suspendisse aliquam odio ex, in facilisis turpis dictum quis. Morbi a venenatis ante, at imperdiet neque. Nullam eu risus dignissim, semper nunc in, sodales nibh. Sed tempus sapien id libero vulputate, at vestibulum tellus tempor. Aenean ornare massa et semper porta.&lt;/p&gt;
+            &lt;/div&gt;
+          }
+        /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDom.render(
+  &lt;MyModal /&gt;,
+  document.getElementById('modal')
+);
+        </code>
+      </pre>
+    </div>
+  </div>
+</section>
+
+<section class="footer block-github block--centered">
+  <div class="block block--centered">
+    <img src="img/github-logo.png" />
+    <h2>GitHub</h2>
+    <p>The SUI-Modal component is available as an open source resource in GitHub.</p>
+    <a href="https://github.com/SUI-Components/sui-card">https://github.com/SUI-Components/sui-card</a>
+  </div>
+</section>
+
+<section class="footer block-npm block--centered">
+  <div class="block block--centered">
+    <img src="img/npm-logo.png" />
+    <div>
+      <h2>Node Package Manager</h2>
+      <p>The SUI-Modal component is available as an open source resource in NPM.</p>
+      <a href="https://www.npmjs.com/package/@schibstedspain/sui-card">https://www.npmjs.com/package/@schibstedspain/sui-card</a>
+    </div>
+  </div>
+</section>
+
+<section class="block-dark block--centered">
+  <div class="block block--centered">
+    <h2>Contributions</h2>
+    <p>There is still room for improvement. If you are considering adding a feature <strong>don't hesitate to fork and pull request</strong>.</p>
+    <h2>Share</h2>
+    <p>Star and share SUI-card component to show your support. In addition you can follow the twitter account <a href="https://twitter.com/SUIEngineers">SUIEngineers</a> to keep in touch.</p>
+    <h2>License</h2>
+    <p>This component is released under <a href="https://github.com/SUI-Components/sui-card/blob/master/MIT-LICENSE.txt">MIT license</a></p>
+  </div>
+</section>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.0.0/codemirror.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.0.0/mode/javascript/javascript.min.js"></script>
+<script src="./js/prism.js"></script>
+<script src="./dist/index.js"></script>
