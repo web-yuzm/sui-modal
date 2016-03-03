@@ -77,7 +77,7 @@ export default class SuiModal extends React.Component {
                 onClick={this.closeModal.bind(this)}
               >
                 {this.props.textCloseHidden ?
-                  <span className="h-HiddenText">
+                  <span className='h-HiddenText'>
                     {this.props.textClose}
                   </span> :
                   this.props.textClose

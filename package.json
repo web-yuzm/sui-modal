@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-modal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/",
   "contributors": [{
     "name": "Daniel de la Cruz",
